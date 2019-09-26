@@ -9,7 +9,7 @@ print('Content-type: text/html; charset=UTF-8\r\n')
 print('Web servo')
 
 print('<form action="" method="post">')
-print('deg<input type="text" name="deg" size="40">')
+print('deg<input type="number" name="deg" size="40">')
 print('<input type="submit" name="button" value="rotate">')
 print('</form>')
 
@@ -27,5 +27,6 @@ def setservo(deg):
 	servo.ChangeDutyCycle(D)
 	time.sleep(1.0)
 
-setservo(value)
+setservo(int(value))
+
 
